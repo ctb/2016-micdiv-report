@@ -1,4 +1,6 @@
 \documentclass{article}
+\usepackage{graphicx}
+\bibliographystyle{plos2009}
 
 \begin{document}
 
@@ -11,16 +13,20 @@
 
 \section*{Introduction}
 
-\section*{Methods}
+\section*{Methods and Data}
 
 \paragraph{16s Colony PCR} Each colony was picked and touched to 20ul of
 alkaline PEG200 (``ALP'').  This was then boiled for 5 minutes to lyse
 the cells. 1 ul of cell lysate was then added to a 25 ul Promega GoTaq
 G2-based PCR reaction with the bacterial 16s primers 8F and 1391R.  16
 rounds of PCR was performed with a 1.5 minute extension time.  After
-PCR, bands were checked on a gel; for successful amplifications,
+PCR, bands were checked on a gel; then,
 Sanger sequencing was performed directly from the PCR reactions with
 the primer 515F.
+
+\paragraph{Data availability}
+
+All data is available at https://github.com/ctb/2016-micdiv-report/.
 
 \section*{Results and Discussion}
 
@@ -35,7 +41,7 @@ from the start of the narrow outflow channel. The material for the
 second enrichment, culture 8, was taken from the underwater surface of
 a sea table enrichment that originated from a microbial mat, also
 taken from Trunk River.  Both enrichments were incubated at 30 deg
-in a foil-lined box.
+in a foil-lined box to prevent phototroph growth.
 
 After 18 hours, significant turbidity was observed in both
 enrichments, along with substantial amounts of supersaturated gas,
@@ -51,7 +57,7 @@ both enrichment cultures, to a final concentration of 20 mM.
 After the addition of acetate, both transfers grew to white opacity
 within about 16 hours at 30 deg.  Two subsequent transfers of each
 culture (1ml into 40 ml ``BB+SNA'', BB with thiosulfate, nitrate, and
-acetate) also exhibited the same growth.
+acetate) also exhibited similar growth.
 
 \subsection*{Enrichments exhibited nitrate and acetate dependent growth}
 
@@ -61,7 +67,15 @@ four culture conditions: BB, BB with thiosulfate and acetate (BB+SA),
 BB with nitrate and acetate (BB+NA), and BB with acetate (BB+A).
 After incubation for 16 hours, only the BB+NA grew, indicating that
 the enrichments required both nitrate and acetate but not
-thiosulfate. @@
+thiosulfate (Figure~\ref{fig:diff}).
+
+\begin{figure}[!ht]
+  \centerline{\includegraphics[width=4in]{diff.png}}
+  \caption{Both enrichments 4 and 8 (first and third row) exhibit
+    nitrate and acetate-dependent growth (third column) in anaerobic BB medium. No growth was observed in base BB media, BB+thiosulfate and acetate, or BB+acetate.}
+  \label{fig:diff}
+\end{figure}
+
 
 \subsection*{Enrichments yielded colonies when grown on solid media}
 
@@ -83,18 +97,22 @@ overnight to opacity.
 
 I then transferred these three isolates (3, 5, and 8) from BB+SNA
 anaerobic liquid culture back to LB plates, where they again grew
-(@@).
+(see Figure~\ref{fig:LB}).
+
+\begin{figure}[!ht]
+  \centerline{\includegraphics[width=4in]{LB.png}}
+  \caption{All three isolate colonies grew after transfer from LB
+    through BB+SNA anaerobic culture followed by streaking on LB.}
+  \label{fig:LB}
+\end{figure}
 
 \subsection*{Isolate colonies were identified by 16s colony PCR as {\em Shewnaella} spp.}
 
-I extracted DNA from the eight LB isolate colonies by picking the
-colonies and boiling them in 20ul of ALP, and then used
-the @@ and @@ 16s primers to amplify a diagnostic region of the 16s
-gene with PCR.  All 8 yielded bands, which were then Sanger sequenced.
-BLAST of all 8 colonies against nt revealed @@@ (Table @@@).  Colonies
-3, 5 and 8 showed strong similarity to XX YY ZZ, clearly identifying
-the colonies as members of the genus {\em Shewanella}.
-%(decolorationis and algae).
+I picked colonies and performed 16s PCR on the eight LB isolate
+colonies as described in the Methods.  All 8 yielded bands, which were
+then Sanger sequenced.  BLAST of all 8 colonies against NCBI's ``nt''
+database showed strong similarity (99\%) to two known species of
+Shewanella (Table~\ref{tab:16s}).
 
 \begin{table}
 \centering
@@ -151,16 +169,25 @@ Shewanella sp. Chr-15 &
 JQ863373.1 \\
 \hline
 \end{tabular}
-\caption{BLAST-based characterization of Sanger-sequenced 16s regions from colony PCRs (position 515 and 3' sequence).  All colonies are clearly identified as Shewanella at 99\% identity.}
+\caption{BLAST-based characterization of Sanger-sequenced 16s regions from colony PCRs.  All colonies are clearly identified as {\em Shewanella} at 99\% identity.}
 \label{tab:16s}
 \end{table}
 
 \subsection*{Isolate cultures contain Spirilla-shaped microbes}
 
 I examined all three cultures with light microscopy and saw
-Spirilla-like bacteria (fig @@).  These bacteria appeared to move in a
-corkscrew-like fashion.  This morphology is at odds with their
-molecular identification as Shewanella spp, which are typically
-rod-shaped bacilli.
+Spirilla-like bacteria (Figure~\ref{fig:spirilla}).  These bacteria
+appeared to move in a corkscrew-like fashion.  This morphology is at
+odds with their molecular identification as Shewanella spp, which are
+typically rod-shaped bacilli.
+
+\begin{figure}[!ht]
+  \centerline{\includegraphics[width=4in]{spirilla.png}}
+  \caption{Light microscopy image of isolate colony 8, showing a
+    bent-rod shape characteristic of spirillae; all three isolate
+    colonies (3, 5, and 8) exhibited identical morphology.}
+  \label{fig:spirilla}
+\end{figure}
+
 
 \end{document}
